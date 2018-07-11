@@ -16,4 +16,5 @@
     VOLUME [ "/permanent-data" ]
     VOLUME [ "/home/nobody/.local/share" ]
     USER nobody:nogroup
+    WORKDIR /permanent-data
     ENTRYPOINT [ "/usr/bin/gedit" ]
