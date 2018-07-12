@@ -14,9 +14,10 @@ RUN zypper --non-interactive install --force-resolution iso-codes
 RUN zypper --non-interactive install --force-resolution libcanberra-gtk3-module
 RUN zypper --non-interactive install --force-resolution cantarell-fonts
 
+VOLUME [ "/home/nobody/.local/share" ]
 # For saving documents
 VOLUME [ "/permanent-data" ]
-VOLUME [ "/home/nobody/.local/share" ]
+
 USER nobody:nogroup
 WORKDIR /permanent-data
 ENTRYPOINT [ "/usr/bin/gedit" ]
