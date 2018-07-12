@@ -15,7 +15,7 @@ RUN zypper --non-interactive install --force-resolution libudev1
 RUN zypper --non-interactive install --force-resolution xauth
 
 # App and dependencies
-RUN zypper --non-interactive install --force-resolution gedit
+RUN zypper --non-interactive install --force-resolution gedit=3.20.2-3.24
 RUN zypper --non-interactive install --force-resolution iso-codes
 RUN zypper --non-interactive install --force-resolution libcanberra-gtk3-module
 RUN zypper --non-interactive install --force-resolution cantarell-fonts
