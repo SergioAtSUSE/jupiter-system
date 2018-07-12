@@ -5,8 +5,7 @@ LABEL VERSION="0.1.0"
 LABEL DESCRIPTION="gedit to be executed on a MicroOS server with X forwarding from a remote X-client"
 LABEL GITHUB="https://github.com/SergioAtSUSE/jupiter-system"
 
-RUN groupadd -r nogroup
-RUN useradd -r -g nogroup nobody
+RUN usermod --append --groups nogroup nobody
 RUN zypper --gpg-auto-import-keys ref
 RUN zypper --non-interactive install --force-resolution xauth
 RUN zypper --non-interactive install --force-resolution gedit
