@@ -8,6 +8,7 @@ LABEL GITHUB="https://github.com/SergioAtSUSE/jupiter-system"
 RUN groupadd -r nogroup
 RUN useradd -r -g nogroup nobody
 RUN zypper --gpg-auto-import-keys ref
+RUN zypper --non-interactive install --force-resolution xauth
 RUN zypper --non-interactive install --force-resolution gedit
 RUN zypper --non-interactive install --force-resolution iso-codes
 RUN zypper --non-interactive install --force-resolution libcanberra-gtk3-module
