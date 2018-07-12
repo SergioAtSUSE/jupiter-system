@@ -1,4 +1,4 @@
-#!BuildTag: gedit-jupiter
+#!BuildTag: jupiter-system/gedit
 FROM opensuse:42.3
 LABEL MAINTAINER="sergiolindo.empresa@gmail.com"
 LABEL VERSION="0.1.0"
