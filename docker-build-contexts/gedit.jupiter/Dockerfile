@@ -1,5 +1,5 @@
 #!BuildTag: gedit-jupiter
-FROM opensuse/tumbleweed
+FROM opensuse:42.3
 LABEL MAINTAINER="sergiolindo.empresa@gmail.com"
 LABEL VERSION="0.1.0"
 LABEL DESCRIPTION="gedit to be executed on a MicroOS server with X forwarding from a remote X-client"
