@@ -7,6 +7,8 @@ LABEL GITHUB="https://github.com/SergioAtSUSE/jupiter-system"
 
 RUN usermod --append --groups nogroup nobody
 RUN zypper --gpg-auto-import-keys ref
+RUN zypper --non-interactive install --force-resolution libsystemd0
+RUN zypper --non-interactive install --force-resolution libudev1
 RUN zypper --non-interactive install --force-resolution xauth
 RUN zypper --non-interactive install --force-resolution gedit
 RUN zypper --non-interactive install --force-resolution iso-codes
