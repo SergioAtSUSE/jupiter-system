@@ -35,25 +35,5 @@ This project is assuming docker as the container manager tool. The docker images
 
 You can find here a list of already prepared docker images for using with **Jupiter system**:
 
-- gedit.jupiter
-  1. First connect to the microos server
-     ```bash
-     user@local:~$ ssh -X user@microos
-     ```
-  2. Then create the credential file for the container
-     ```bash
-     xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f .docker.xauth nmerge -
-     ```
-  3. Then pull the docker image
-     ```bash
-     user@microos:~$ sudo docker image pull registry.opensuse.org/home/slindomansilla/branches/opensuse/templates/images/42.3/containers/jupiter-system/gedit:1.0.2-3.20.2-3.24
-     ```
-  4. Then you can run these commands:
-     ```bash
-     # find out your user id
-     userid=`id`
-     # start the container
-     user@microos:~$ sudo docker container run --name user_gedit -e DISPLAY=$DISPLAY -e XAUTHORITY=/home/sergio/.Xauthority -v ~/.docker.xauth:/home/sergio/.Xauthority --user ${id}:nogroup registry.opensuse.org/home/slindomansilla/branches/opensuse/templates/images/42.3/containers/jupiter-system/gedit:1.0.2-3.20.2-3.24
-     ```
-  5. Compose file (coming soon)
+- See [jupiter-system/gedit](docker-build-contexts/gedit.jupiter/)
 - firefox.jupiter (coming soon)
