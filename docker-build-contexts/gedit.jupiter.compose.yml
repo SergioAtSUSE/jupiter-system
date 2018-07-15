@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  gedit:
+    container_name: ${USERNAME}_gedit
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/home/${USERNAME}/.Xauthority
+    image: 'registry.opensuse.org/home/binary_sequence/branches/opensuse/templates/images/42.3/containers/jupiter-system/gedit:1.0.2-3.20.2-3.24'
+    read_only: true
+    user: ${USERID}:nogroup
+    volumes:
+      - type: bind
+        read_only: true
+        source: ${HOME}/.docker.xauth
+        target: /home/${USERNAME}/.Xauthority
