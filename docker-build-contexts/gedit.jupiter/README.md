@@ -17,7 +17,7 @@ This is the build context to build the image **jupiter-system/gedit**
     user@microos:~$ xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f .docker.xauth nmerge -
     ```
 3. Then download the docker-compose file
-   https://raw.githubusercontent.com/software-for-life/jupiter-system/suse_hackweek17/docker-build-contexts/gedit.jupiter.compose.yml
+   - https://raw.githubusercontent.com/software-for-life/jupiter-system/v1.0.3-3.20.2-3.24/docker-build-contexts/gedit.jupiter.compose.yml
 4. Finally run the container:
     ```bash
     user@microos:~$ USERNAME=${USER} USERID=${UID} docker-compose -f gedit.jupiter.compose.yml up
