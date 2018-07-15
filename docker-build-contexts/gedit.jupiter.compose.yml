@@ -5,7 +5,7 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
       - XAUTHORITY=/home/${USERNAME}/.Xauthority
-    image: 'registry.opensuse.org/home/binary_sequence/branches/opensuse/templates/images/42.3/containers/jupiter-system/gedit:1.0.2-3.20.2-3.24'
+    image: 'registry.opensuse.org/home/binary_sequence/branches/opensuse/templates/images/42.3/containers/jupiter-system/gedit:1.0.3-3.20.2-3.24'
     read_only: true
     user: ${USERID}:nogroup
     volumes:
